@@ -6,3 +6,4 @@ project/project
 coupon-api/src/main/java
 coupon-api/src/main/scala
 .settings/
+bin/
