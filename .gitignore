@@ -1,0 +1,8 @@
+.idea/
+.DS_Store
+target
+project/project
+*.log
+coupon-api/src/main/java
+coupon-api/src/main/scala
+.settings/
