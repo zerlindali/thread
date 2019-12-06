@@ -1,6 +1,6 @@
 package com.roocon.thread.t4;
 
-public class Demo {
+public class DemoPriority {
 	
 	public static void main(String[] args) {
 		
@@ -9,9 +9,10 @@ public class Demo {
 		Thread t2 =  new Thread(new Target());
 		
 		
-		t1.setPriority(1);
-		t2.setPriority(Thread.MIN_PRIORITY);
-		
+		t1.setPriority(Thread.MIN_PRIORITY);
+		// 高优先级吞噬所有低优先级的CPU时间片
+		t2.setPriority(Thread.MAX_PRIORITY);
+
 		t1.start();
 		t2.start();
 		
