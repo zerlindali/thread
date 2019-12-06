@@ -51,15 +51,6 @@ public class Demo7Stream {
         t1.start();
         t2.start();
 
-        try {
-            /**
-             *  thread.join的含义是当前线程需要等待previousThread线程终止之后才从thread.join返回。
-             *  简单来说，就是线程没有执行完之前，会一直阻塞在join方法处。
-             */
-            t1.join();
-            t2.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
     }
 }
