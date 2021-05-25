@@ -11,6 +11,7 @@ import java.util.List;
  */
 public class PartOneB {
     static int count = 0;
+
     public static String[] mergeSort(String[] strs, int low, int high) {
 
         int mid = (low + high) / 2;
@@ -62,9 +63,9 @@ public class PartOneB {
     // Merge sort implementation test
     public static void main(String[] args) {
         // read an_article.txt
-        File articleFile = new File("E:\\workspace\\thread\\src\\main\\resources\\an_article.txt");
+        File articleFile = new File("D:\\workspace_gupao\\thread\\src\\main\\resources\\an_article.txt");
         // read google-10000-english-no-swears.txt
-        File googleFile = new File("E:\\workspace\\thread\\src\\main\\resources\\google-10000-english-no-swears.txt");
+        File googleFile = new File("D:\\workspace_gupao\\thread\\src\\main\\resources\\google-10000-english-no-swears.txt");
         // get words from an_article.txt
         List<String> articleWords=PartOneA.getLowerCaseWords(articleFile);
         // get words from google-10000-english-no-swears.txt

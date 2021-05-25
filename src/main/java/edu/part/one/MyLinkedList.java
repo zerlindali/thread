@@ -1,7 +1,5 @@
 package edu.part.one;
 
-import java.util.LinkedList;
-
 public class MyLinkedList
 {
     private Node head;
@@ -47,43 +45,69 @@ public class MyLinkedList
     // addAtPosition: adds new item into the list at specific position
     public void addAtPosition(int position, String item)
     {
-        Node pre = null;
+        calculateSize();
+        // Add your code here
+        Node pre = this.head;
         Node next = null;
-        Node node = new Node(item, next);
-        if(position >= size)
+
+        if(position > size || position<0) {
+            calculateSize();
+            return;
+        }
 
         if(position == 0) {
             Node n = new Node(item, this.head);
             setHead(n);
+            calculateSize();
+            return;
         }
 
-        for(int i = 0; i< position; i++) {
+        if(position == 1) {
             pre = this.head;
         }
 
-        if(pre!=null){
-            pre.next = node;
+        for(int i = 1; i<position && position > 1; i++){
+            pre = pre.next;
         }
 
+        next = pre.next;
+        Node n = new Node(item, next);
+        pre.next = n;
+        calculateSize();
 
-      /*  // assert succ != null;
-        final LinkedList.Node<E> pred = succ.prev;
-        final LinkedList.Node<E> newNode = new LinkedList.Node<>(pred, e, succ);
-        succ.prev = newNode;
-        if (pred == null)
-            first = newNode;
-        else
-            pred.next = newNode;
-        size++;
-        modCount++;*/
-        // Add your code here
     }
 
     // deleteAtPosition: deletes item from the list at specific position
     public Node deleteAtPosition(int position)
     {
         // Add your code here (and remove null)
-        return null;
+        calculateSize();
+        // Add your code here
+        Node pre = this.head;
+        Node next = null;
+
+        if(position >= size || position<0) {
+            return null;
+        }
+
+        if(position == 0) {
+            setHead(pre.next);
+            calculateSize();
+            return pre;
+        }
+
+        if(position == 1) {
+            pre = this.head;
+        }
+
+        for(int i = 1; i<position && position > 1; i++){
+            pre = pre.next;
+        }
+
+        next = pre.next;
+        pre.next = next.next;
+        calculateSize();
+        return next;
     }
 
     // findByPosition: finds the element at specific position in the MyLinkedList

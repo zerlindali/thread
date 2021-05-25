@@ -1,6 +1,5 @@
 package edu.zerlinda.pic;
 
-import org.openjdk.jol.info.ClassLayout;
 
 /**
  * @author ZerlindaLi create at 2021/5/24 17:15
@@ -8,7 +7,7 @@ import org.openjdk.jol.info.ClassLayout;
  * @description ClassLayoutDemo
  */
 public class ClassLayoutDemo {
-
+/*
     // 占一个字节的boolean类型
     private boolean flag;
     // int可惜占4个字节
@@ -19,7 +18,7 @@ public class ClassLayoutDemo {
         // 对象实例在内存中的布局
         System.out.println(ClassLayout.parseInstance(classLayoutDemo).toPrintable());
 
-        /**
+        *//**
          * edu.zerlinda.pic.ClassLayoutDemo object internals:
          *  OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
          *       // 存储对象头
@@ -30,6 +29,6 @@ public class ClassLayoutDemo {
          *      12     4        (loss due to the next object alignment)
          * Instance size: 16 bytes
          * Space losses: 0 bytes internal + 4 bytes external = 4 bytes total
-         */
-    }
+         *//*
+    }*/
 }
